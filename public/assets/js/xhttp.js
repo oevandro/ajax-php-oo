@@ -1,4 +1,4 @@
-var xhttp = XMLHttpRequest;
+var xhttp = new XMLHttpRequest;
 
 function xmlHttpGet(url, callback, parameters=''){
 
