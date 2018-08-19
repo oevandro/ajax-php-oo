@@ -1,0 +1,14 @@
+{
+    "name": "evandro/ajax",
+    "authors": [
+        {
+            "name": "oevandro",
+            "email": "oevandrodesouza@gmail.com"
+        }
+    ],
+    "autoload": {
+    	"psr-4":{
+    		"app\\": "app"
+    	}
+    }
+}
