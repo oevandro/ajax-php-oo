@@ -10,7 +10,11 @@ window.onload = function(){
 
 		xhttp.onreadystatechange = function(){
 
-			console.log(xhttp.status + " / " + xhttp.readyState);
+			//console.log(xhttp.status + " / " + xhttp.readyState);
+
+			if(this.readyState < 4){
+				div_users.innerHTML = `<div class="col-md-12 text-center"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span></div>`
+			}
 
 			if(xhttp.readyState ==  4 && xhttp.status == 200){
 
