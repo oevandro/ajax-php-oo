@@ -16,7 +16,25 @@ window.onload = function(){
 
 				var users = JSON.parse(this.responseText);
 
-				console.log(users);
+				var table = `<table class="table table-striped">`;
+				
+				table += `<thead><tr><td>ID</td><td>NOME</td><td>EMAIL</td></tr></thead>`;
+
+				table += `<tbody>`;
+
+				users.forEach(function(user) {
+
+					table += `<tr>`;
+					table += `<td>${user.id}</td>`;
+					table += `<td>${user.nome}</td>`;
+					table += `<td>${user.email}</td>`;
+					table += `</tr>`;
+					
+				});
+
+				table += `</tbody></table>`;
+
+				div_users.innerHTML = table;
 
 			}
 
